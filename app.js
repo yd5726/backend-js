@@ -96,7 +96,15 @@ app.get('/reserve', function (req, res) {  // get 요청이 들어오면 응답
 app.post('/send_reserve', function (req, res) {  // post 요청이 들어오면 응답
     //res.send('post 요청에 대한 응답 페이지');   // HTML 파일로 응답
     //console.log(req.body);  // bodyParser가 이해하고 출력
-    res.send(req.body.guest_name+"님, 환영합니다.");
+    //res.send(req.body.guest_name+"님, 환영합니다.");
+    console.log(req.body)   /*ajax로 통신 : ajax.js*/
+    /*
+    if(req.body.guest_name === "홍길동"){   
+        res.send(req.body.guest_name+"님, 환영합니다.");
+    } else{
+        res.send("회원가입 페이지로 이동합니다.")
+    }
+    */
 })
 
 app.get('/cs', function (req, res) {  // get 요청이 들어오면 응답
