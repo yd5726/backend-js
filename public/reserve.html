@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>welcome</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="script/jquery-3.6.1.js"></script>
+    <link rel="icon" href="images/favicon.png" type="image/X-UA-Compatible">
+</head>
+<body>
+    <header>
+        <h1>예약하기</h1>
+        <h2>예약자 확인</h2>
+    </header>
+    <nav>
+        <ul id="gnb">
+            <li><a href="/">처음으로</a></li>
+            <li><a href="#">하나투어</a></li>
+            <li><a href="/reserve">예약/확인</a></li>
+            <li><a href="#">고객센터</a></li>
+        </ul>
+    </nav>
+    <form action="/send_reserve" id="checkForm" name="checkForm" autocomplete="off" method="post">
+        <label for="guest_name">예약자 명</label>
+        <input type="text" id="guest_name" name="guest_name" placeholder="12자 이내">
+        <label for="guest_phone">전화번호</label>
+        <input type="tel" id="guest_phone" name="guest_phone" placeholder="-빼고 입력하세요">
+        <input type="submit" value="확인">
+    </form>
+    <script src="script/ajax.js"></script>
+</body>
+</html>

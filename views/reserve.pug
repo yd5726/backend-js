@@ -1,0 +1,35 @@
+doctype html
+html(lang="ko")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title=title
+        link(rel="stylesheet", href="css/style.css")
+        script(src="script/jquery-3.6.1.js") 
+        link(rel="shorcut icon", href="images/favicon.png", type="image/x-icone")
+    body 
+        header
+            h1 Salar de Uyuni : 우유니 사막
+            p=message
+        nav
+            ul(id="gnb")
+                li
+                    a(href="/") 처음으로
+                li
+                    a(href="/tour") 하나투어
+                li
+                    a(href="/reserve") 예약/확인
+                li
+                    a(href="/cs") 고객센터
+        form(action="/send_reserve",id="checkForm",name="checkForm",autocomplete="off",method="post") 
+            label(for="guest_name") 예약자 명
+            input(type="text",id="guest_name",name="guest_name",placeholder="12자 이내")
+            label(for="guest_phone") 전화번호
+            input(type="tel",id="guest_phone",name="guest_phone",placeholder="-빼고 입력하세요")
+            input(type="submit", value="확인")
+        hr
+        footer
+            div(class="container") 
+                p &copy; minju. 2022. all rights reserved.
+        script(src="script/ajax.js") 
